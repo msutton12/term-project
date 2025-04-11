@@ -5,35 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f69f64e9-6824-4ed0-a26b-3a709a742385" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/assets/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/pages/Dashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/term-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ListGroup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ListGroup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Groups.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +57,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -107,7 +87,7 @@
       <workItem from="1744310189923" duration="785000" />
       <workItem from="1744310990411" duration="1090000" />
       <workItem from="1744322664079" duration="502000" />
-      <workItem from="1744323340949" duration="2819000" />
+      <workItem from="1744323340949" duration="6253000" />
     </task>
     <servers />
   </component>

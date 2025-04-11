@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
 import Dashboard from './pages/Dashboard';
+import Groups from './pages/Groups';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 {/* Insert <Navbar Here/> */}
                 <Routes>
                     <Route path="/" element={<Dashboard />} />
+                    <Route path="/groups" element={<Groups />} />
                 </Routes>
             </div>
         </Router>
