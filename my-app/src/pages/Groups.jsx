@@ -13,7 +13,7 @@ const Groups = () => {
     return (
         <div>
         <h2>My Groups</h2>
-        <ListGroup groups={groups}/> {/* this would have to change to the groups database */}
+        <ListGroup groups={groups}/>{/* this would have to change to the groups database */}
         </div>
     );
 };

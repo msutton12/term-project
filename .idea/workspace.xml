@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f69f64e9-6824-4ed0-a26b-3a709a742385" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/LoginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Navigation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/SignUpForm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/pages/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ListGroup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ListGroup.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/pages/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Groups.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +88,7 @@
       <workItem from="1744310189923" duration="785000" />
       <workItem from="1744310990411" duration="1090000" />
       <workItem from="1744322664079" duration="502000" />
-      <workItem from="1744323340949" duration="6253000" />
+      <workItem from="1744323340949" duration="7987000" />
     </task>
     <servers />
   </component>
