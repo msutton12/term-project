@@ -1,19 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
-import ListGroup from "../components/ListGroup.jsx";
-
-// this would change to the groups in the database
+// Hardcoded groups
 const groups = [
-    "Tom & Mauricio",
-    "Roommates",
-    "Beach Trip"
-]
+    { id: 1, name: "Tom & Mauricio" },
+    { id: 2, name: "Roommates" },
+    { id: 3, name: "Beach Trip" }
+];
 
 const Groups = () => {
     return (
         <div>
-        <h2>My Groups</h2>
-        <ListGroup groups={groups}/>{/* this would have to change to the groups database */}
+            <h2>My Groups</h2>
+            {/* Display groups as clickable links */}
+            <ul>
+                {groups.map(group => (
+                    <li key={group.id}>
+                        <Link to={`/group/${group.id}`} className="text-blue-600 hover:underline">
+                            {group.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
