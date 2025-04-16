@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const ListGroup = ({ groups }) => {
     return (
@@ -9,8 +10,13 @@ const ListGroup = ({ groups }) => {
                     className="list-group-item"
                 >
                     {group}
+                    <button variant="primary" className="md-4">
+                        <Link className="nav-link" to="/group">Open</Link>
+                    </button>
+
                 </li>
-            ))}
+
+                ))}
         </ul>
     );
 };
