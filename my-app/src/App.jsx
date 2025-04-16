@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Groups from './pages/Groups';
 import Login from './pages/Login';
 import Transactions from "./pages/Transactions.jsx";
+import GroupDetail from './pages/groupDetails.jsx';
 
 // Components
 import Navbar from './components/Navigation.jsx';
@@ -19,7 +20,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/groups" element={<Groups />} />
-                    <route path="/transactions" element={<Transactions />} />
+                    <Route path="/transactions" element={<Transactions />} />
+                    <Route path="/group/:groupId" element={<GroupDetail />} /> {/* Add the route for GroupDetailPage */}
                 </Routes>
             </div>
         </Router>
@@ -27,4 +29,3 @@ function App() {
 }
 
 export default App;
-
