@@ -1,10 +1,9 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom'; // Import Link
+import React, { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Card from '../components/Card';
 import { Button } from "react-bootstrap";
 
-
-// Hardcoded group details
+// Hardcoded base group details (initial)
 const groupDetails = {
     1: {
         name: "Tom & Mauricio",
@@ -33,12 +32,25 @@ const groupDetails = {
 };
 
 const GroupDetailPage = () => {
-    const { groupId } = useParams(); // Retrieve the groupId from the URL
-    const group = groupDetails[groupId];
+    const { groupId } = useParams();
 
-    if (!group) {
+    // ✅ Defensive check for invalid group ID
+    if (!groupDetails[groupId]) {
         return <div>Group not found.</div>;
     }
+
+    const baseGroup = groupDetails[groupId];
+
+    // ✅ Merge localStorage transactions with hardcoded ones
+    const [group] = useState(() => {
+        const stored = JSON.parse(localStorage.getItem('groupTransactions')) || {};
+        const storedTxs = stored[groupId] || [];
+
+        return {
+            ...baseGroup,
+            transactions: [...storedTxs, ...baseGroup.transactions]
+        };
+    });
 
     return (
         <div className="p-4">
@@ -75,11 +87,10 @@ const GroupDetailPage = () => {
                 </table>
             </Card>
 
-            {/* Add AddTransaction Button */}
             <Link to={`/add-transaction?groupId=${groupId}`} className="text-decoration-none">
-            <Button className="bg-blue-600 text-white-100 p-2 rounded-md mt-4 hover:bg-blue-700">
-                Add New Transaction
-            </Button>
+                <Button className="bg-blue-600 text-white p-2 rounded-md mt-4 hover:bg-blue-700">
+                    Add New Transaction
+                </Button>
             </Link>
         </div>
     );
