@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom'; // Import Link
 import Card from '../components/Card';
+import { Button } from "react-bootstrap";
+
 
 // Hardcoded group details
 const groupDetails = {
@@ -74,8 +76,10 @@ const GroupDetailPage = () => {
             </Card>
 
             {/* Add AddTransaction Button */}
-            <Link to={`/add-transaction?groupId=${groupId}`} className="bg-blue-600 text-black-50 p-2 rounded-md mt-4 hover:bg-blue-700">
+            <Link to={`/add-transaction?groupId=${groupId}`} className="text-decoration-none">
+            <Button className="bg-blue-600 text-white-100 p-2 rounded-md mt-4 hover:bg-blue-700">
                 Add New Transaction
+            </Button>
             </Link>
         </div>
     );
