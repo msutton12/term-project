@@ -1,0 +1,119 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"f69f64e9-6824-4ed0-a26b-3a709a742385\" name=\"Changes\" comment=\"push\">\n      <change beforePath=\"$PROJECT_DIR$/package-lock.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package-lock.json\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;msutton12&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/msutton12/term-project.git&quot;,\n    &quot;accountId&quot;: &quot;b649e086-e668-4244-a63c-612684bcf621&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2vY7WydRY8hadiPVdPInlMT10FS\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Node.js.Dashboard.jsx.executor\": \"Run\",\n    \"Node.js.Transactions.jsx.executor\": \"Run\",\n    \"Node.js.app.jsx.executor\": \"Run\",\n    \"Node.js.dashboard.jsx.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/tomaugustine/term-project2/my-app/src/pages\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"settings.editor.selected.configurable\": \"com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable\",\n    \"ts.external.directory.path\": \"C:\\\\Program Files\\\\JetBrains\\\\WebStorm 2024.3.2\\\\plugins\\\\javascript-plugin\\\\jsLanguageServicesImpl\\\\external\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/my-app/src/pages\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\mausu\\OneDrive - Bentley University\\CS213\\term-project\\frontend\\src\\components\" />\n      <recent name=\"C:\\Users\\mausu\\OneDrive - Bentley University\\CS213\\term-project\\backend\\app\" />\n      <recent name=\"C:\\Users\\mausu\\OneDrive - Bentley University\\CS213\\term-project\" />\n      <recent name=\"C:\\Users\\mausu\\OneDrive - Bentley University\\CS213\\term-project\\backend\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"f69f64e9-6824-4ed0-a26b-3a709a742385\" name=\"Changes\" comment=\"\" />\n      <created>1744310188771</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1744310188771</updated>\n      <workItem from=\"1744310189923\" duration=\"785000\" />\n      <workItem from=\"1744310990411\" duration=\"1090000\" />\n      <workItem from=\"1744322664079\" duration=\"502000\" />\n      <workItem from=\"1744323340949\" duration=\"7987000\" />\n      <workItem from=\"1744824722135\" duration=\"9000\" />\n      <workItem from=\"1744824738671\" duration=\"2030000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"push\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744825861942</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744825861942</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"push\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744825905765</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744825905765</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Add my-app and .idea folders\" />\n    <MESSAGE value=\"push\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"push\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1b920b6f4562566b09c9ca06e98f5f6315e91427)
++++ b/.idea/workspace.xml	(date 1744828362960)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f69f64e9-6824-4ed0-a26b-3a709a742385" name="Changes" comment="push">
+-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+-    </list>
++    <list default="true" id="f69f64e9-6824-4ed0-a26b-3a709a742385" name="Changes" comment="groups and group details" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -35,26 +33,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Node.js.Dashboard.jsx.executor": "Run",
+-    "Node.js.Transactions.jsx.executor": "Run",
+-    "Node.js.app.jsx.executor": "Run",
+-    "Node.js.dashboard.jsx.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "/Users/tomaugustine/term-project2/my-app/src/pages",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Node.js.Dashboard.jsx.executor&quot;: &quot;Run&quot;,
++    &quot;Node.js.Transactions.jsx.executor&quot;: &quot;Run&quot;,
++    &quot;Node.js.app.jsx.executor&quot;: &quot;Run&quot;,
++    &quot;Node.js.dashboard.jsx.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/tomaugustine/term-project2/my-app/src/pages&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/my-app/src/pages" />
+@@ -86,7 +84,7 @@
+       <workItem from="1744322664079" duration="502000" />
+       <workItem from="1744323340949" duration="7987000" />
+       <workItem from="1744824722135" duration="9000" />
+-      <workItem from="1744824738671" duration="2030000" />
++      <workItem from="1744824738671" duration="3617000" />
+     </task>
+     <task id="LOCAL-00001" summary="push">
+       <option name="closed" value="true" />
+@@ -104,7 +102,31 @@
+       <option name="project" value="LOCAL" />
+       <updated>1744825905765</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="push">
++      <option name="closed" value="true" />
++      <created>1744828047177</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1744828047178</updated>
++    </task>
++    <task id="LOCAL-00004" summary="groups and group details">
++      <option name="closed" value="true" />
++      <created>1744828076602</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1744828076602</updated>
++    </task>
++    <task id="LOCAL-00005" summary="groups and group details">
++      <option name="closed" value="true" />
++      <created>1744828194929</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1744828194929</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -113,6 +135,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Add my-app and .idea folders" />
+     <MESSAGE value="push" />
+-    <option name="LAST_COMMIT_MESSAGE" value="push" />
++    <MESSAGE value="groups and group details" />
++    <option name="LAST_COMMIT_MESSAGE" value="groups and group details" />
+   </component>
+ </project>
+\ No newline at end of file

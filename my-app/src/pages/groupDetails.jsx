@@ -73,7 +73,7 @@ const GroupDetailPage = () => {
                 </table>
             </Card>
 
-            {/* Add Transaction Button */}
+            {/* Add AddTransaction Button */}
             <Link to={`/add-transaction?groupId=${groupId}`} className="bg-blue-600 text-black-50 p-2 rounded-md mt-4 hover:bg-blue-700">
                 Add New Transaction
             </Link>

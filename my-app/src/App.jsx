@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Pages
 import Dashboard from './pages/Dashboard';
 import Groups from './pages/Groups';
-import Login from './pages/Login';
+import AddTransaction from './pages/AddTransaction.jsx';
 import Transactions from './pages/Transactions.jsx';
 import GroupDetail from './pages/groupDetails.jsx';
-import AddTransaction from './pages/AddTransaction.jsx';
 
 
 // Components
@@ -19,7 +18,6 @@ function App() {
             <div className="min-h-screen bg-gray-100 p-4">
                 <Navbar />
                 <Routes>
-                    <Route path="/login" element={<Login />} />
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/groups" element={<Groups />} />
                     <Route path="/transactions" element={<Transactions />} />
