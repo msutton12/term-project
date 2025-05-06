@@ -34,8 +34,13 @@ const UserSelect = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!selectedUser) return;
+
+        // Ensure we're storing the active user properly
         localStorage.setItem('activeUser', selectedUser);
-        navigate('/'); // go to dashboard
+        console.log('User selected:', selectedUser);
+
+        // Force a page reload to ensure state is updated
+        window.location.href = '/';
     };
 
     const handleAddNewUser = () => {

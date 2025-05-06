@@ -9,7 +9,8 @@ import Groups from './pages/Groups';
 import AddTransaction from './pages/AddTransaction';
 import GroupDetail from './pages/groupDetails';
 import CreateGroup from './pages/CreateGroup';
-import { UserSelect } from './components/RequireUser';
+import RequireUser, { UserSelect } from './components/RequireUser';
+
 // Components
 import Navbar from './components/Navigation';
 
@@ -63,11 +64,31 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/login" element={<UserSelect />} />
-                    <Route path="/" element={isUserLoggedIn() ? <Dashboard /> : <Navigate to="/login" />} />
-                    <Route path="/groups" element={isUserLoggedIn() ? <Groups /> : <Navigate to="/login" />} />
-                    <Route path="/create-group" element={isUserLoggedIn() ? <CreateGroup /> : <Navigate to="/login" />} />
-                    <Route path="/groups/:groupId" element={isUserLoggedIn() ? <GroupDetail /> : <Navigate to="/login" />} />
-                    <Route path="/add-transaction" element={isUserLoggedIn() ? <AddTransaction /> : <Navigate to="/login" />} />
+                    <Route path="/" element={
+                        <RequireUser>
+                            <Dashboard />
+                        </RequireUser>
+                    } />
+                    <Route path="/groups" element={
+                        <RequireUser>
+                            <Groups />
+                        </RequireUser>
+                    } />
+                    <Route path="/create-group" element={
+                        <RequireUser>
+                            <CreateGroup />
+                        </RequireUser>
+                    } />
+                    <Route path="/groups/:groupId" element={
+                        <RequireUser>
+                            <GroupDetail />
+                        </RequireUser>
+                    } />
+                    <Route path="/add-transaction" element={
+                        <RequireUser>
+                            <AddTransaction />
+                        </RequireUser>
+                    } />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Card from './Card';
 
@@ -180,20 +180,6 @@ const TransactionForm = () => {
                 </Col>
             </Row>
         </div>
-    );
-};
-
-// Create a Row and Col components since they're not imported
-const Row = ({ children, className = '' }) => (
-    <div className={`row ${className}`}>{children}</div>
-);
-
-const Col = ({ children, md, lg, className = '' }) => {
-    const mdClass = md ? `col-md-${md}` : '';
-    const lgClass = lg ? `col-lg-${lg}` : '';
-
-    return (
-        <div className={`col ${mdClass} ${lgClass} ${className}`}>{children}</div>
     );
 };
 
