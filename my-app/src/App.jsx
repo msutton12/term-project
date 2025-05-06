@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
@@ -14,6 +14,45 @@ import Navbar from './components/Navigation.jsx';
 import RequireUser from './components/RequireUser.jsx';
 
 function App() {
+    useEffect(() => {
+        const groups = JSON.parse(localStorage.getItem('groups')) || {};
+        const transactions = JSON.parse(localStorage.getItem('groupTransactions')) || {};
+
+        // If no groups exist, insert a default one
+        if (Object.keys(groups).length === 0) {
+            const groupId = "dev-001";
+
+            const defaultGroup = {
+                id: groupId,
+                name: "Developers",
+                members: ["Tom", "Mauricio"]
+            };
+
+            const defaultTxs = [
+                {
+                    payer: "Tom",
+                    amount: "$50",
+                    date: "2025-05-01",
+                    status: "Paid",
+                    details: "Initial setup tools"
+                },
+                {
+                    payer: "Mauricio",
+                    amount: "$8",
+                    date: "2025-05-02",
+                    status: "Paid",
+                    details: "Coffee Run"
+                }
+            ];
+
+            groups[groupId] = defaultGroup;
+            transactions[groupId] = defaultTxs;
+
+            localStorage.setItem("groups", JSON.stringify(groups));
+            localStorage.setItem("groupTransactions", JSON.stringify(transactions));
+        }
+    }, []);
+
     return (
         <Router>
             <div className="min-h-screen bg-gray-100 p-4">
