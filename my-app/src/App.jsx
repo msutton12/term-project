@@ -1,17 +1,17 @@
 import React, {useEffect} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages
 import Dashboard from './pages/Dashboard';
 import Groups from './pages/Groups';
-import AddTransaction from './pages/AddTransaction.jsx';
-import GroupDetail from './pages/groupDetails.jsx';
-import CreateGroup from './pages/CreateGroup.jsx';
-import UserSelect from './pages/UserSelect.jsx';
-
+import AddTransaction from './pages/AddTransaction';
+import GroupDetail from './pages/groupDetails';
+import CreateGroup from './pages/CreateGroup';
+import { UserSelect } from './components/RequireUser';
 // Components
-import Navbar from './components/Navigation.jsx';
-import RequireUser from './components/RequireUser.jsx';
+import Navbar from './components/Navigation';
 
 function App() {
     useEffect(() => {
@@ -25,7 +25,8 @@ function App() {
             const defaultGroup = {
                 id: groupId,
                 name: "Developers",
-                members: ["Tom", "Mauricio"]
+                members: ["Tom", "Mauricio"],
+                createdAt: new Date().toISOString()
             };
 
             const defaultTxs = [
@@ -33,15 +34,13 @@ function App() {
                     payer: "Tom",
                     amount: "$50",
                     date: "2025-05-01",
-                    status: "Paid",
-                    details: "Initial setup tools"
+                    description: "Initial setup tools"
                 },
                 {
                     payer: "Mauricio",
                     amount: "$8",
                     date: "2025-05-02",
-                    status: "Paid",
-                    details: "Coffee Run"
+                    description: "Coffee Run"
                 }
             ];
 
@@ -53,26 +52,23 @@ function App() {
         }
     }, []);
 
+    // Check if user is logged in
+    const isUserLoggedIn = () => {
+        return localStorage.getItem('activeUser') !== null;
+    };
+
     return (
         <Router>
-            <div className="min-h-screen bg-gray-100 p-4">
+            <div className="min-h-screen bg-light">
                 <Navbar />
                 <Routes>
-                    <Route path="/whoami" element={<UserSelect />} />
-                    <Route
-                        path="/*"
-                        element={
-                            <RequireUser>
-                                <Routes>
-                                    <Route path="/" element={<Dashboard />} />
-                                    <Route path="/groups" element={<Groups />} />
-                                    <Route path="/create-group" element={<CreateGroup />} />
-                                    <Route path="/group/:groupId" element={<GroupDetail />} />
-                                    <Route path="/add-transaction" element={<AddTransaction />} />
-                                </Routes>
-                            </RequireUser>
-                        }
-                    />
+                    <Route path="/login" element={<UserSelect />} />
+                    <Route path="/" element={isUserLoggedIn() ? <Dashboard /> : <Navigate to="/login" />} />
+                    <Route path="/groups" element={isUserLoggedIn() ? <Groups /> : <Navigate to="/login" />} />
+                    <Route path="/create-group" element={isUserLoggedIn() ? <CreateGroup /> : <Navigate to="/login" />} />
+                    <Route path="/groups/:groupId" element={isUserLoggedIn() ? <GroupDetail /> : <Navigate to="/login" />} />
+                    <Route path="/add-transaction" element={isUserLoggedIn() ? <AddTransaction /> : <Navigate to="/login" />} />
+                    <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>
         </Router>

@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Container */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.app-navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.app-navbar-brand {
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+/* Card */
+.app-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.app-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.app-card-body {
+    color: #4b5563;
+}
+
+/* Balance Styling */
+.balance-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.text-owed-to-you {
+    color: #10b981; /* Green */
+}
+
+.text-you-owe {
+    color: #ef4444; /* Red */
+}
+
+.text-settled {
+    color: #6366f1; /* Purple */
+}
+
+.text-gray {
+    color: #6b7280;
+}
+
+/* Activity Feed */
+.activity-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-date {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+/* List Group */
+.list-group-item {
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    margin-bottom: -1px;
+}
+
+.list-group-item-action {
+    color: #4b5563;
+    text-decoration: none;
+    display: block;
+}
+
+.list-group-item-action:hover {
+    background-color: #f9fafb;
+}
+
+/* Form controls */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+    font-weight: 600;
+    color: #4b5563;
+    background-color: #f9fafb;
+}
+
+table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .d-md-block {
+        display: block !important;
+    }
+
+    .d-none {
+        display: none !important;
+    }
+}

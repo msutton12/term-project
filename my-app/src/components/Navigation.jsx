@@ -1,39 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Navbar as BootstrapNavbar, Nav, Container, Button } from 'react-bootstrap';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const activeUser = localStorage.getItem('activeUser');
+
+    const handleLogout = () => {
+        localStorage.removeItem('activeUser');
+        navigate('/login');
+    };
+
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary mb-4">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">If you see this you are in the right version</Link>
-
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Dashboard</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/groups">Groups</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/transactions">Transactions</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <BootstrapNavbar className="app-navbar" expand="lg">
+            <Container fluid>
+                <Link to="/" className="navbar-brand app-navbar-brand">SplitCost</Link>
+                <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+                <BootstrapNavbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Link to="/" className="nav-link">Dashboard</Link>
+                        <Link to="/groups" className="nav-link">Groups</Link>
+                        {activeUser && (
+                            <div className="d-flex align-items-center">
+                                <span className="mx-3 text-gray">Logged in as {activeUser}</span>
+                                <Button
+                                    variant="outline-secondary"
+                                    size="sm"
+                                    onClick={handleLogout}>
+                                    Switch User
+                                </Button>
+                            </div>
+                        )}
+                    </Nav>
+                </BootstrapNavbar.Collapse>
+            </Container>
+        </BootstrapNavbar>
     );
 };
 

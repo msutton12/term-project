@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
+import { Button, Row, Col } from 'react-bootstrap';
 import {
     PieChart,
     Pie,
     Cell,
     Tooltip,
-    ResponsiveContainer
+    ResponsiveContainer,
+    Legend
 } from 'recharts';
 
 const Dashboard = () => {
@@ -73,68 +75,129 @@ const Dashboard = () => {
         setPieData(formattedPieData);
     }, []);
 
-    const COLORS = ['#00C49F', '#FF8042', '#FFBB28', '#8884d8', '#82ca9d'];
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric'
+        });
+    };
+
+    const COLORS = ['#10b981', '#f59e0b', '#ef4444', '#8884d8', '#6366f1'];
 
     return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold mb-4">Hello, {user}</h1>
+        <div className="app-container">
+            <div className="mb-4">
+                <h1 className="mb-3">Welcome back, {user}!</h1>
+                <p className="text-gray">Here's your expense summary and recent activity</p>
+            </div>
 
-            <Card title="Your Balance">
-                <p className={balance < 0 ? 'text-red-600' : 'text-green-600'}>
-                    {balance === 0
-                        ? 'You are settled up ✅'
-                        : balance > 0
-                            ? `You are owed $${balance.toFixed(2)}`
-                            : `You owe $${Math.abs(balance).toFixed(2)}`}
-                </p>
-            </Card>
+            <Row>
+                <Col lg={4}>
+                    <Card title="Your Balance" className="balance-card">
+                        <div className={`balance-amount ${balance === 0
+                            ? 'text-settled'
+                            : balance > 0
+                                ? 'text-owed-to-you'
+                                : 'text-you-owe'}`}>
+                            {balance === 0
+                                ? '$0.00'
+                                : balance > 0
+                                    ? `+$${balance.toFixed(2)}`
+                                    : `-$${Math.abs(balance).toFixed(2)}`}
+                        </div>
+                        <p>
+                            {balance === 0
+                                ? 'You are all settled up!'
+                                : balance > 0
+                                    ? 'You are owed money'
+                                    : 'You owe money'}
+                        </p>
+                    </Card>
 
-            <Card title="Recent Activity">
-                {activity.length === 0 ? (
-                    <p>No transactions yet.</p>
-                ) : (
-                    <ul className="space-y-2">
-                        {activity.slice(0, 5).map((tx, idx) => (
-                            <li key={idx}>
-                                {tx.payer === user ? 'You' : tx.payer} paid {tx.amount} in <strong>{tx.groupName}</strong>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </Card>
-
-            <Card title="Balance Overview (Who Owes Who)">
-                {pieData.length === 0 ? (
-                    <p>No balances to show yet.</p>
-                ) : (
-                    <ResponsiveContainer width="100%" height={300}>
-                        <PieChart>
-                            <Pie
-                                data={pieData}
-                                dataKey="value"
-                                nameKey="name"
-                                cx="50%"
-                                cy="50%"
-                                outerRadius={100}
-                                label={({ name, direction, value }) =>
-                                    direction === 'youOweThem'
-                                        ? `You owe ${name}: $${value.toFixed(2)}`
-                                        : `${name} owes you: $${value.toFixed(2)}`
-                                }
-                            >
-                                {pieData.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Card title="Recent Activity">
+                        {activity.length === 0 ? (
+                            <p className="text-center py-4 text-gray">No transactions yet.</p>
+                        ) : (
+                            <ul className="list-unstyled">
+                                {activity.slice(0, 5).map((tx, idx) => (
+                                    <li key={idx} className="activity-item">
+                                        <div className="d-flex justify-content-between">
+                                            <div>
+                                                <strong>{tx.payer === user ? 'You' : tx.payer}</strong> paid <span className="text-primary">{tx.amount}</span>
+                                                <div>in <span className="text-secondary">{tx.groupName}</span></div>
+                                            </div>
+                                            <span className="activity-date">{formatDate(tx.date)}</span>
+                                        </div>
+                                    </li>
                                 ))}
-                            </Pie>
-                            <Tooltip />
-                        </PieChart>
-                    </ResponsiveContainer>
-                )}
-            </Card>
+                            </ul>
+                        )}
+                        <div className="text-center mt-3">
+                            <Link to="/groups" className="btn btn-outline-primary btn-sm">
+                                View All Groups
+                            </Link>
+                        </div>
+                    </Card>
+                </Col>
 
-            <Link to="/groups" className="btn btn-primary mt-4">
-                View All Groups
-            </Link>
+                <Col lg={8}>
+                    <Card title="Balance Overview">
+                        {pieData.length === 0 ? (
+                            <div className="text-center py-5 text-gray">
+                                <p>No balances to show yet.</p>
+                                <p className="mt-3">
+                                    <Link to="/create-group" className="btn btn-success">
+                                        Create Your First Group
+                                    </Link>
+                                </p>
+                            </div>
+                        ) : (
+                            <ResponsiveContainer width="100%" height={400}>
+                                <PieChart>
+                                    <Pie
+                                        data={pieData}
+                                        dataKey="value"
+                                        nameKey="name"
+                                        cx="50%"
+                                        cy="50%"
+                                        outerRadius={150}
+                                        labelLine={false}
+                                        label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                                    >
+                                        {pieData.map((entry, index) => (
+                                            <Cell
+                                                key={`cell-${index}`}
+                                                fill={COLORS[index % COLORS.length]}
+                                                stroke="#fff"
+                                                strokeWidth={2}
+                                            />
+                                        ))}
+                                    </Pie>
+                                    <Tooltip
+                                        formatter={(value, name, props) => [
+                                            `$${value.toFixed(2)}`,
+                                            props.payload.direction === 'youOweThem'
+                                                ? `You owe ${name}`
+                                                : `${name} owes you`
+                                        ]}
+                                    />
+                                    <Legend layout="vertical" verticalAlign="middle" align="right" />
+                                </PieChart>
+                            </ResponsiveContainer>
+                        )}
+                    </Card>
+
+                    <div className="d-flex gap-2 mt-4 justify-content-center">
+                        <Link to="/groups">
+                            <Button variant="primary">View All Groups</Button>
+                        </Link>
+                        <Link to="/create-group">
+                            <Button variant="success">Create New Group</Button>
+                        </Link>
+                    </div>
+                </Col>
+            </Row>
         </div>
     );
 };
