@@ -58,8 +58,12 @@ function App() {
         return localStorage.getItem('activeUser') !== null;
     };
 
+    // Check if we're running on GitHub Pages
+    const isGitHubPages = window.location.hostname === "tomaugustine03.github.io";
+    const basename = isGitHubPages ? "/term-project-copy" : "";
+
     return (
-        <Router>
+        <Router basename={basename}>
             <div className="min-h-screen bg-light">
                 <Navbar />
                 <Routes>
